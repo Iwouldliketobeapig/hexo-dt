@@ -17,12 +17,8 @@ customize:
     thumbnail: true # enable posts thumbnail, options: true, false
     favicon: # path to favicon
     social_links: # for more icons, please see http://fontawesome.io/icons/#brand
-        twitter: /
-        facebook: /
-        google-plus: /
-        github: https://github.com/ppoffice/hexo-theme-hueman
+        github: https://github.com/Iwouldliketobeapig/hexo-dt
         weibo: /
-        rss: /
 
 # Widgets
 widgets:
@@ -78,4 +74,5 @@ miscellaneous:
         twitter_id:
         google_plus:
     links:
-        Hexo: http://hexo.io
+        你想把老子笑死: https://github.com/TecLsh
+        cc: https://github.com/stevecl

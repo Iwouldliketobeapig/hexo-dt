@@ -2,7 +2,7 @@
 title: flex布局
 tag: Css
 categories:
-  - css
+  - 前端
 ---
 ![](/imgs/css/theme/flex.jpg)
 

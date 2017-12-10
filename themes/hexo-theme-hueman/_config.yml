@@ -17,7 +17,7 @@ customize:
     thumbnail: true # enable posts thumbnail, options: true, false
     favicon: # path to favicon
     social_links: # for more icons, please see http://fontawesome.io/icons/#brand
-        github: https://github.com/Iwouldliketobeapig/hexo-dt
+        github: https://github.com/Iwouldliketobeapig
         weibo: /
 
 # Widgets

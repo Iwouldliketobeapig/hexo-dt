@@ -1,8 +1,8 @@
 ---
 title: 再读JavaScript高级程序设计（1）
 tag: 
-  -javascript
-  -javascript高级程序语言设计
+  - javascript
+  - javascript高级程序语言设计
 categories:
   - 前端
 ---

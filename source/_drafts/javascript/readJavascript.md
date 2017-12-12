@@ -44,7 +44,7 @@ outer();
 
 ## 5.6-基本包装类型
 
-- 特殊应用类型：Boolean、Number和String。实际上，每当读取一个基本类型值得时候，后台会就会创建一个相对应的基本包装类型的对象，让我们能够调用一些方法来操作这些谁。
+- 特殊应用类型：Boolean、Number和String。实际上，每当读取一个基本类型值得时候，后台会就会创建一个相对应的基本包装类型的对象，让我们能够调用一些方法来操作这些数据。
 ```javascript
 var s1 = "some test";
 var s2 = s1.substring(2);
@@ -60,3 +60,33 @@ s1 = null;
 ```
 
 *（使用new操作符创建的应用类型的实例，在执行流离开当前作用域前都一直保存在内存中。而自动创建的基本包装类型的对象，则只存在与一行代码的执行瞬间，然后立即被销魂）*
+
+Object构造函数也会想工作方法一样，根据传入值的类型返回相应的基本包装类型
+
+### 5.6.1-Boolean类型
+```javascript
+let falseObject = new Boolean(false); // 创建一个引用类型的布尔值false
+falseObject && true; // true
+typeof falseObject; // Object
+falseObject instanceof Boolean; // true
+```
+
+### 5.6.2-Number类型
+
+- 在使用toFixed()传入0的情况下，IE8及之前的版本不能正确的摄入的范围在{[-0.94, -0.5], [0,5, 0.94]}之间的值。在这个范围内的值IE会返回0，而不是-1或是1
+```javascript
+// polyfill
+// 判断否为ie
+function isIE () {
+  let keywrods = "Microsoft Internet Explorer";
+  if (navigator.appName = keywrods) {
+    return true
+  }
+  return false;
+}
+
+// 判断ie版本号
+function version () {
+  
+}
+```

@@ -62,7 +62,6 @@ s1 = null;
 *（使用new操作符创建的应用类型的实例，在执行流离开当前作用域前都一直保存在内存中。而自动创建的基本包装类型的对象，则只存在与一行代码的执行瞬间，然后立即被销魂）*
 
 Object构造函数也会想工作方法一样，根据传入值的类型返回相应的基本包装类型
-
 ### 5.6.1-Boolean类型
 ```javascript
 let falseObject = new Boolean(false); // 创建一个引用类型的布尔值false
@@ -74,19 +73,27 @@ falseObject instanceof Boolean; // true
 ### 5.6.2-Number类型
 
 - 在使用toFixed()传入0的情况下，IE8及之前的版本不能正确的摄入的范围在{[-0.94, -0.5], [0,5, 0.94]}之间的值。在这个范围内的值IE会返回0，而不是-1或是1
-```javascript
-// polyfill
-// 判断否为ie
-function isIE () {
-  let keywrods = "Microsoft Internet Explorer";
-  if (navigator.appName = keywrods) {
-    return true
-  }
-  return false;
-}
 
-// 判断ie版本号
-function version () {
-  
-}
+- toExponential(),方法返回指数表示法
+```javascript
+let num = 133;
+num.toExponential(1); // 1.3e+2
+num = 136;
+num.toExponential(1); // 1.4e+2
+```
+
+-某个数值的最合适的格式，使用toPrecision()(根据要处理的数值决定到底是调用toFixed()还是toPrecision())
+```javascript
+let num = 99;
+num.toPrecision(1); // 1e+2
+num.toPrecision(2); // 99
+num.toPrecision(3); // 99.0
+```
+
+### 5.6.3-String类型
+
+- trim(),创建一个字符串的副本，删除前置及后缀的所有空格，然后返回空格
+```javascript
+let str = "  hello dutao,    very good  ";
+let afterTrim = str.trim(); // "hello dutao,    very good"
 ```

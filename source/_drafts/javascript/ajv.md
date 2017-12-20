@@ -87,7 +87,7 @@ Ajv使用[doT templates](https://github.com/olado/doT)生成代码，将JSON sch
   - 所有验证器关键字 (see [JSON Schema validation keywords](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md))
   - 完全支持远程判定（远程模式必须在添加'addSchema'或者被编译为可用情况下使用）
   - 支持模式之间的循环引用
-  - correct string lengths for strings with unicode pairs (can be turned off)
+  - 处理正确的unicode字符串长度 (可关闭)
   - [formats](#formats) defined by JSON Schema draft 4 standard and custom formats (can be turned off)
   - [validates schemas against meta-schema](#api-validateschema)
 - supports [browsers](#using-in-browser) and Node.js 0.10-8.x
@@ -126,7 +126,7 @@ npm install ajv@beta
 Try it in the Node.js REPL: https://tonicdev.com/npm/ajv
 
 
-The fastest validation call:
+快速上手:
 
 ```javascript
 var Ajv = require('ajv');
@@ -136,7 +136,7 @@ var valid = validate(data);
 if (!valid) console.log(validate.errors);
 ```
 
-or with less code
+更少的代码
 
 ```javascript
 // ...
@@ -145,7 +145,7 @@ if (!valid) console.log(ajv.errors);
 // ...
 ```
 
-or
+或
 
 ```javascript
 // ...
@@ -155,8 +155,9 @@ if (!valid) console.log(ajv.errorsText());
 // ...
 ```
 
-See [API](#api) and [Options](#options) for more details.
+查看更详细的 [API](#api) 和 [Options](#options).
 
+Ajv将schemas编译成函数并缓存
 Ajv compiles schemas to functions and caches them in all cases (using schema serialized with [fast-json-stable-stringify](https://github.com/epoberezkin/fast-json-stable-stringify) or a custom function as a key), so that the next time the same schema is used (not necessarily the same object instance) it won't be compiled again.
 
 The best performance is achieved when using compiled functions returned by `compile` or `getSchema` methods (there is no additional function call).

@@ -88,7 +88,7 @@ Ajv使用[doT templates](https://github.com/olado/doT)生成代码，将JSON sch
   - 完全支持远程判定（远程模式必须在添加'addSchema'或者被编译为可用情况下使用）
   - 支持模式之间的循环引用
   - 处理正确的unicode字符串长度 (可关闭)
-  - [formats](#formats) defined by JSON Schema draft 4 standard and custom formats (can be turned off)
+  - JSON Schema fraft 4 standard和自定义的（可关闭）[formats](#formats)
   - [validates schemas against meta-schema](#api-validateschema)
 - supports [browsers](#using-in-browser) and Node.js 0.10-8.x
 - [asynchronous loading](#asynchronous-schema-compilation) of referenced schemas during compilation
@@ -226,7 +226,7 @@ See [JSON Schema validation keywords](https://github.com/epoberezkin/ajv/blob/ma
 
 ## Formats
 
-The following formats are supported for string validation with "format" keyword:
+使用关键之"format"支持以下格式的字符串验证
 
 - _date_: full-date according to [RFC3339](http://tools.ietf.org/html/rfc3339#section-5.6).
 - _time_: time with optional time-zone.
@@ -243,9 +243,9 @@ The following formats are supported for string validation with "format" keyword:
 - _json-pointer_: JSON-pointer according to [RFC6901](https://tools.ietf.org/html/rfc6901).
 - _relative-json-pointer_: relative JSON-pointer according to [this draft](http://tools.ietf.org/html/draft-luff-relative-json-pointer-00).
 
-There are two modes of format validation: `fast` and `full`. This mode affects formats `date`, `time`, `date-time`, `uri`, `email`, and `hostname`. See [Options](#options) for details.
+两种格式验证模式：'fast'和'full'.会影响到`date`, `time`, `date-time`, `uri`, `email`, 和 `hostname`。详情请看[Options](#options)
 
-You can add additional formats and replace any of the formats above using [addFormat](#api-addformat) method.
+通过[addFormat](#api-addformat)方法添加或者修改验证模式
 
 The option `unknownFormats` allows changing the default behaviour when an unknown format is encountered. In this case Ajv can either fail schema compilation (default) or ignore it (default in versions before 5.0.0). You also can whitelist specific format(s) to be ignored. See [Options](#options) for details.
 
@@ -984,15 +984,15 @@ If no parameter is passed all schemas but meta-schemas will be removed and the c
 
 ##### <a name="api-addformat"></a>.addFormat(String name, String|RegExp|Function|Object format) -&gt; Ajv
 
-Add custom format to validate strings or numbers. It can also be used to replace pre-defined formats for Ajv instance.
+添加一个通用验证格式，也可以用来替换Ajv的一些默认格式
 
-Strings are converted to RegExp.
+字符串会被转换为正则表达式.
 
-Function should return validation result as `true` or `false`.
+如果用函数返回结果应该为'true'或'false'
 
-If object is passed it should have properties `validate`, `compare` and `async`:
+如用用object需要有`validate`, `compare` 和 `async`
 
-- _validate_: a string, RegExp or a function as described above.
+- _validate_:字符串,正则表达式或者函数.
 - _compare_: an optional comparison function that accepts two strings and compares them according to the format meaning. This function is used with keywords `formatMaximum`/`formatMinimum` (defined in [ajv-keywords](https://github.com/epoberezkin/ajv-keywords) package). It should return `1` if the first value is bigger than the second value, `-1` if it is smaller and `0` if it is equal.
 - _async_: an optional `true` value if `validate` is an asynchronous function; in this case it should return a promise that resolves with a value `true` or `false`.
 - _type_: an optional type of data that the format applies to. It can be `"string"` (default) or `"number"` (see https://github.com/epoberezkin/ajv/issues/291#issuecomment-259923858). If the type of data is different, the validation will pass.

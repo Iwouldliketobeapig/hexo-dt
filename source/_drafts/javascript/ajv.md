@@ -84,7 +84,7 @@ Ajv使用[doT templates](https://github.com/olado/doT)生成代码，将JSON sch
 ## 特征
 
 - Ajv实现了完整的JSON Schema[draft 6](http://json-schema.org/)和draft 4标准
-  - 所有验证器关键字 (see [JSON Schema validation keywords](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md))
+  - 所有验证器关键字 (see [JSON Schema验证关键字](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md))
   - 完全支持远程判定（远程模式必须在添加'addSchema'或者被编译为可用情况下使用）
   - 支持模式之间的循环引用
   - 处理正确的unicode字符串长度 (可关闭)
@@ -157,34 +157,33 @@ if (!valid) console.log(ajv.errorsText());
 
 查看更详细的 [API](#api) 和 [Options](#options).
 
-Ajv将schemas编译成函数并缓存
-Ajv compiles schemas to functions and caches them in all cases (using schema serialized with [fast-json-stable-stringify](https://github.com/epoberezkin/fast-json-stable-stringify) or a custom function as a key), so that the next time the same schema is used (not necessarily the same object instance) it won't be compiled again.
+Ajv将schemas编译成函数并缓存,使用[fast-json-stable-stringify](https://github.com/epoberezkin/fast-json-stable-stringify)或自定义函数作为关键字序列化的模式。所以当下一次使用相同的schema的时候(不一定时相同的对象实例)就不需要再编译一次了。
 
-The best performance is achieved when using compiled functions returned by `compile` or `getSchema` methods (there is no additional function call).
+当使用`compile`或`getScheam`方法返回编译的函数时，可以获得最佳性能。
 
-__Please note__: every time a validation function or `ajv.validate` are called `errors` property is overwritten. You need to copy `errors` array reference to another variable if you want to use it later (e.g., in the callback). See [Validation errors](#validation-errors)
+__注意__: 当每次一个验证函数活着`ajv.validate`被调用时`errors`属性会被覆盖。如果你想使用`errors`(e.g., in the callback)你需要复制`errors`数组到另一个变量中。查看 [Validation errors](#validation-errors)
 
 
-## Using in browser
+## 在浏览器中使用
 
-You can require Ajv directly from the code you browserify - in this case Ajv will be a part of your bundle.
+你可以直接在你的ajv中应用ajv-这种情况下ajv会成为你包的一部分。
 
-If you need to use Ajv in several bundles you can create a separate UMD bundle using `npm run bundle` script (thanks to [siddo420](https://github.com/siddo420)).
+如果你需要在多个包中应用ajv,你可以使用`npm  run bundle`[siddo420](https://github.com/siddo420)创建单独的UMD包。
 
-Then you need to load Ajv in the browser:
+然后你需要在浏览器中引用ajv
 ```html
 <script src="ajv.min.js"></script>
 ```
 
-This bundle can be used with different module systems; it creates global `Ajv` if no module system is found.
+这个包可在不同的模块中使用；如果系统模块中没有找到，会创建一个全局的Ajv。
 
-The browser bundle is available on [cdnjs](https://cdnjs.com/libraries/ajv).
+浏览器包在[cdnjs](https://cdnjs.com/libraries/ajv)中可以使用。
 
-Ajv is tested with these browsers:
+可以在以下浏览器中使用Ajv:
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/epoberezkin.svg)](https://saucelabs.com/u/epoberezkin)
 
-__Please note__: some frameworks, e.g. Dojo, may redefine global require in such way that is not compatible with CommonJS module format. In such case Ajv bundle has to be loaded before the framework and then you can use global Ajv (see issue [#234](https://github.com/epoberezkin/ajv/issues/234)).
+__注意__: 一些架构, e.g. Dojo, may redefine global require in such way that is not compatible with CommonJS module format. In such case Ajv bundle has to be loaded before the framework and then you can use global Ajv (see issue [#234](https://github.com/epoberezkin/ajv/issues/234)).
 
 
 ## Command line interface
@@ -942,7 +941,7 @@ This allows you to do nice things like the following.
 
 ```javascript
 var validate = new Ajv().addSchema(schema).addFormat(name, regex).getSchema(uri);
-```  
+```
 
 ##### .addMetaSchema(Array&lt;Object&gt;|Object schema [, String key]) -&gt; Ajv
 
@@ -992,10 +991,10 @@ If no parameter is passed all schemas but meta-schemas will be removed and the c
 
 如用用object需要有`validate`, `compare` 和 `async`
 
-- _validate_:字符串,正则表达式或者函数.
-- _compare_: an optional comparison function that accepts two strings and compares them according to the format meaning. This function is used with keywords `formatMaximum`/`formatMinimum` (defined in [ajv-keywords](https://github.com/epoberezkin/ajv-keywords) package). It should return `1` if the first value is bigger than the second value, `-1` if it is smaller and `0` if it is equal.
-- _async_: an optional `true` value if `validate` is an asynchronous function; in this case it should return a promise that resolves with a value `true` or `false`.
-- _type_: an optional type of data that the format applies to. It can be `"string"` (default) or `"number"` (see https://github.com/epoberezkin/ajv/issues/291#issuecomment-259923858). If the type of data is different, the validation will pass.
+- _validate_:string,RegExp或者function.
+- _compare_: 一个接受两个参数并根据格式进行比较的可选函数。 该函数与`formatMaximum`/`formatMinimum` (在[ajv-keywords](https://github.com/epoberezkin/ajv-keywords)包中定义)一起使用。如果第一个值大于第二个值应该返回1,-1是小于，如果是相等则是零。
+- _async_: 如果'validate'是异步函数，则为true; 在这种情况下应该返回一个promise切resolves返回值应该为true或false。
+- _type_: 可选参数，限制参数的类型，可以为string(默认值)或numbers(查看 https://github.com/epoberezkin/ajv/issues/291#issuecomment-259923858)。当值与类型不同时，验证将通过。
 
 Custom formats can be also added via `formats` option.
 

@@ -1,5 +1,5 @@
 ---
-title: 再读JavaScript高级程序设计（1）
+title: 丢掉的Javascript（1）
 tag: 
   - javascript
   - javascript高级程序语言设计
@@ -8,9 +8,9 @@ categories:
 ---
 ![](/imgs/javascript/theme/readJavascript.png)
 
-> 作者：我原是猪
+- 作者：我原是猪
 
-> 邮箱：1173127007@qq.com **欢迎补充，指错，讨论**
+- 邮箱：1173127007@qq.com **欢迎补充，指错，讨论**
 
 ### 5.5.4-函数内部对象
 

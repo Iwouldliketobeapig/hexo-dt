@@ -184,12 +184,12 @@ __注意__: 当每次一个验证函数活着`ajv.validate`被调用时`errors`�
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/epoberezkin.svg)](https://saucelabs.com/u/epoberezkin)
 
-__注意__: 一些架构, e.g. Dojo, may redefine global require in such way that is not compatible with CommonJS module format. In such case Ajv bundle has to be loaded before the framework and then you can use global Ajv (see issue [#234](https://github.com/epoberezkin/ajv/issues/234)).
+__注意__: 一些架构, e.g. Dojo, 可能会与CommonJS不兼容的方式重新定义全局引入。 在这种情况下Ajv应该提前加载(查看相关issue [#234](https://github.com/epoberezkin/ajv/issues/234)).
 
 
-## Command line interface
+## 界面命令行
 
-CLI is available as a separate npm package [ajv-cli](https://github.com/jessedc/ajv-cli). It supports:
+CLI 可以通过安装包[ajv-cli](https://github.com/jessedc/ajv-cli)使用。支持以下：
 
 - compiling JSON-schemas to test their validity
 - BETA: generating standalone module exporting a validation function to be used without Ajv (using [ajv-pack](https://github.com/epoberezkin/ajv-pack))
@@ -203,9 +203,9 @@ CLI is available as a separate npm package [ajv-cli](https://github.com/jessedc/
 - reporting changes in data after validation in [JSON-patch](https://tools.ietf.org/html/rfc6902) format
 
 
-## Validation keywords
+## Validation关键字
 
-Ajv supports all validation keywords from draft 4 of JSON-schema standard:
+Ajv支持所有的JSON-schema草案4标准的关键字
 
 - [type](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#type)
 - [for numbers](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#keywords-for-numbers) - maximum, minimum, exclusiveMaximum, exclusiveMinimum, multipleOf

@@ -221,12 +221,12 @@ With [ajv-keywords](https://github.com/epoberezkin/ajv-keywords) package Ajv als
 - [patternRequired](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#patternrequired-proposed) - like `required` but with patterns that some property should match.
 - [formatMaximum, formatMinimum, formatExclusiveMaximum, formatExclusiveMinimum](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#formatmaximum--formatminimum-and-exclusiveformatmaximum--exclusiveformatminimum-proposed) - setting limits for date, time, etc.
 
-See [JSON Schema validation keywords](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md) for more details.
+查看详情[JSON Schema validation keywords](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md).
 
 
 ## Formats
 
-使用关键之"format"支持以下格式的字符串验证
+使用关键字"format"支持以下格式的字符串验证
 
 - _date_: full-date according to [RFC3339](http://tools.ietf.org/html/rfc3339#section-5.6).
 - _time_: time with optional time-zone.
@@ -247,14 +247,14 @@ See [JSON Schema validation keywords](https://github.com/epoberezkin/ajv/blob/ma
 
 通过[addFormat](#api-addformat)方法添加或者修改验证模式
 
-The option `unknownFormats` allows changing the default behaviour when an unknown format is encountered. In this case Ajv can either fail schema compilation (default) or ignore it (default in versions before 5.0.0). You also can whitelist specific format(s) to be ignored. See [Options](#options) for details.
+`unknownFormats`允许在遇到未知`farmat`的时候更改默认行为，这种情况下Ajv会编译错误（默认）或者忽略（5.0.0之前版本的模型行径），你可以添加白名单；查看[配置](#options)详情
 
-You can find patterns used for format validation and the sources that were used in [formats.js](https://github.com/epoberezkin/ajv/blob/master/lib/compile/formats.js).
+format源码 [formats.js](https://github.com/epoberezkin/ajv/blob/master/lib/compile/formats.js).
 
 
 ## <a name="ref"></a>Combining schemas with $ref
 
-You can structure your validation logic across multiple schema files and have schemas reference each other using `$ref` keyword.
+多个文件中定义验证逻辑，然后使用`$ref`相互引用。
 
 Example:
 
@@ -277,14 +277,14 @@ var defsSchema = {
 };
 ```
 
-Now to compile your schema you can either pass all schemas to Ajv instance:
+在编译的时候可以将你的所有标准传递给Ajv实例：
 
 ```javascript
 var ajv = new Ajv({schemas: [schema, defsSchema]});
 var validate = ajv.getSchema('http://example.com/schemas/schema.json');
 ```
 
-or use `addSchema` method:
+或者使用`addSchema`方法：
 
 ```javascript
 var ajv = new Ajv;
@@ -292,13 +292,14 @@ var validate = ajv.addSchema(defsSchema)
                   .compile(schema);
 ```
 
-See [Options](#options) and [addSchema](#api) method.
+查看[Options](#options) 和 [addSchema](#api) 方法.
 
-__Please note__:
-- `$ref` is resolved as the uri-reference using schema $id as the base URI (see the example).
-- References can be recursive (and mutually recursive) to implement the schemas for different data structures (such as linked lists, trees, graphs, etc.).
-- You don't have to host your schema files at the URIs that you use as schema $id. These URIs are only used to identify the schemas, and according to JSON Schema specification validators should not expect to be able to download the schemas from these URIs.
-- The actual location of the schema file in the file system is not used.
+__注意`（未理解）`__:
+- `$ref` schema通过$id设置一个基础URI(see the example)来uri引用解析。
+- 为了解决不同的数据结构模式（例如链表，树，图等）允许递归应用（以及相互递归）、
+- 不需要将作为$id的模式schema文件托管到URIs上。这些URI只用于标识模式，根据JSON模式规范验证器不应该可以从这些URI种下载文件。
+- 模式文件的实际位置在文件系统中不被使用
+- 将模式的标识符作为`addScheam`方法的第二个参数或者作为`schemas`的选项
 - You can pass the identifier of the schema as the second parameter of `addSchema` method or as a property name in `schemas` option. This identifier can be used instead of (or in addition to) schema $id.
 - You cannot have the same $id (or the schema identifier) used for more than one schema - the exception will be thrown.
 - You can implement dynamic resolution of the referenced schemas using `compileAsync` method. In this way you can store schemas in any system (files, web, database, etc.) and reference them without explicitly adding to Ajv instance. See [Asynchronous schema compilation](#asynchronous-schema-compilation).

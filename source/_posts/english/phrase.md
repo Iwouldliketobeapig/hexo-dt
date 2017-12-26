@@ -14,3 +14,4 @@ categories:
 - `in the case` - 在这种情况下
 - `a part of` - 一部分
 - `in such way` - 以这种方式
+- `either or` - 二者选一

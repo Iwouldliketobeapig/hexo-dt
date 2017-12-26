@@ -13,7 +13,7 @@ categories:
 - 作者：我原是猪
 - 邮箱：1173127007@qq.com **欢迎补充，指错，讨论**
 # webpack-vue
-这是一个考虑基于前后端分离开发，基于webpack + vue + sass的前端开发架构
+这是一个考虑基于前后端分离开发，基于webpack + vue + sass + es6的前端开发架构
 [project路径(https://github.com/Iwouldliketobeapig/webpack-vue)](https://github.com/Iwouldliketobeapig/webpack-vue);
 
 ## 快速使用

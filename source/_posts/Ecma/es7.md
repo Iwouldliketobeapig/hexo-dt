@@ -3,6 +3,7 @@ title: ES2016
 date: 2018-01-15
 tag: 
   - javascript
+  - ecma
 categories:
   - 前端
 ---

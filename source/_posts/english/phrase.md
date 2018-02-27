@@ -15,3 +15,5 @@ categories:
 - `a part of` - 一部分
 - `in such way` - 以这种方式
 - `either or` - 二者选一
+
+[在github上编辑此页](https://github.com/Iwouldliketobeapig/hexo-dt/edit/master/source/_posts/english/phrase.md)

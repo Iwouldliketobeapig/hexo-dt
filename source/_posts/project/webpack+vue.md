@@ -73,3 +73,5 @@ npm i
 ![](/imgs/project/webpack+vue/dev.png)
 
 **列: localhost:8081/templates/index/index.html**
+
+[在github上编辑此页](https://github.com/Iwouldliketobeapig/hexo-dt/edit/master/source/_posts/project/webpack+vue.md)

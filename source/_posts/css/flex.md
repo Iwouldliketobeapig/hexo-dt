@@ -224,3 +224,5 @@ categories:
  
  <img src="/imgs/css/flex/align-self.png">
   <a href="https://github.com/Iwouldliketobeapig/shouldKnow/blob/master/CSS/flex/demo/sonEle/align-self.html" target="_blank">实例路径</a>
+
+[在github在编辑此页](https://github.com/Iwouldliketobeapig/hexo-dt/edit/master/source/_posts/css/flex.md)

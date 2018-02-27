@@ -1,8 +1,9 @@
 ---
-title: ES7
+title: ES2016
 date: 2018-01-15
 tag: 
   - javascript
+  - ecma
 categories:
   - 前端
 ---
@@ -10,7 +11,7 @@ categories:
 
 # ES2016新属性
 
-## 1.Array.prototype.includes(ele, index)
+## 一、Array.prototype.includes(ele, index)
 确定数组中是否存在某个元素，存在返回true,不存在返回false。
 ele -> 元素(可选)
 index -> 元素的位置(可选)
@@ -45,7 +46,7 @@ arr.indexOf(NaN); // -1
 arr.includes(NaN); // true
 ```
 
-## `**`运算符
+## 二、`**`运算符
 幂运算符
 ```javascript
 a ** b 
@@ -65,3 +66,5 @@ Math.pow(2, 3) // 8
 ```javascript
 2**3 // 8
 ```
+
+[在github上编辑此页](https://github.com/Iwouldliketobeapig/hexo-dt/edit/master/source/_posts/Ecma/es7.md)

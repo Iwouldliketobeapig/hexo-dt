@@ -6,6 +6,7 @@ tag:
 categories:
   - 其他
 ---
+
 ![](/imgs/english/theme/bird.png)
 
 ### 2018-2-28
@@ -32,3 +33,12 @@ categories:
 `transform`: 转变
 `translation`: 翻译
 ``
+
+### 2018-3-5
+
+`define`: 确定
+`property`: 属性
+`prototype`: 原形
+`computed`: 计算
+`memoization`: 记忆化
+`mutation`: 变动

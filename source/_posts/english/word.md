@@ -42,3 +42,4 @@ categories:
 `computed`: 计算
 `memoization`: 记忆化
 `mutation`: 变动
+`recursive`: 递归

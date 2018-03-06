@@ -12,27 +12,29 @@ categories:
 # 简单的聊一聊缓存（memoization）
 
 `这是个递归列子`
+
 ```javascript
-function recursive (n) {
+function recursive(n) {
   if (n < 2) {
-    return n
+    return n;
   }
-  return recursive(n - 1) +recursive(n - 2)
+  return recursive(n - 1) + recursive(n - 2);
 }
 ```
 
 `加上缓存`
+
 ```javascript
-let recursive =  (function(){
-  let cache = new Map();
-  return function (n) {
+let recursive = (function() {
+  let cache = [];
+  return function(n) {
     if (n < 2) {
       return n;
     } else {
-      cache[n-1] = cache[n-1]||recursive(n-1);
-      cache[n-2] = cache[n-2]||recursive(n-1);
-      return cache[n-1]+cache[n-2];
+      cache[n - 1] = cache[n - 1] || recursive(n - 1);
+      cache[n - 2] = cache[n - 2] || recursive(n - 1);
+      return cache[n - 1] + cache[n - 2];
     }
-  }
-}())
+  };
+})();
 ```

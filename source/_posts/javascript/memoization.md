@@ -7,7 +7,7 @@ categories:
   - 前端
 ---
 
-![](/imgs/javascript/theme/memoization.jpg)
+![](/imgs/javascript/theme/memoization.png)
 
 # 简单的聊一聊缓存（memoization）
 

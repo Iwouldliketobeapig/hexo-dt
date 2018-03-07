@@ -32,7 +32,6 @@ categories:
 `matrix`: 矩阵
 `transform`: 转变
 `translation`: 翻译
-``
 
 ### 2018-3-5
 
@@ -43,3 +42,7 @@ categories:
 `memoization`: 记忆化
 `mutation`: 变动
 `recursive`: 递归
+
+### 2018-3-6
+`split`: 分裂
+`reverse`: 翻转，相反

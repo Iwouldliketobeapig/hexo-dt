@@ -46,3 +46,15 @@ categories:
 ### 2018-3-6
 `split`: 分裂
 `reverse`: 翻转，相反
+
+### 2018-3-7
+`entires`: 项
+`fill`: 填
+`filter`: 过滤
+`pop`: 抛出
+`reduce`: 减少
+`splice`: 拼接
+`match`：匹配
+`normalize`: 正常化
+`pad`: 垫
+`repeat`: 重复

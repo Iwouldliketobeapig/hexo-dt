@@ -44,10 +44,12 @@ categories:
 `recursive`: 递归
 
 ### 2018-3-6
+
 `split`: 分裂
 `reverse`: 翻转，相反
 
 ### 2018-3-7
+
 `entires`: 项
 `fill`: 填
 `filter`: 过滤
@@ -58,3 +60,9 @@ categories:
 `normalize`: 正常化
 `pad`: 垫
 `repeat`: 重复
+`enumerable`: 枚举
+`configurable`: 配置
+`writable`: 写
+`release`: 发布
+`March`: 三月
+`redirect`: 重定向

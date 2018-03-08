@@ -9,6 +9,8 @@ categories:
 
 ![](/imgs/english/theme/bird.png)
 
+最近发现把英语单词跟我在代码中遇到的单词结合起来就很好记，所以尝试下换个方式学习英语，看能不能再回学校考个四级
+
 ### 2018-2-28
 
 `asynchronous`: 异步

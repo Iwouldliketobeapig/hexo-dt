@@ -68,3 +68,7 @@ categories:
 `release`: 发布
 `March`: 三月
 `redirect`: 重定向
+
+### 2018-3-8
+
+`reset` 重启

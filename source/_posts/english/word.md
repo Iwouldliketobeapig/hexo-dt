@@ -68,3 +68,16 @@ categories:
 `release`: 发布
 `March`: 三月
 `redirect`: 重定向
+
+### 2018-3-8
+
+`reset` 重启
+
+### 2018-3-9
+
+`instance`: 例
+
+### 2018-3-10
+
+`irregular`: 不规则
+`immediate`: 即使（vue watch）

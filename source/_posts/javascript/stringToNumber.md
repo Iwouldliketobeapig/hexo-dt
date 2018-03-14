@@ -1,6 +1,6 @@
 ---
 title: 字符串转为数字
-date: 2018-3-9
+date: 2018-3-13
 tag: 
   - javascript
 categories:

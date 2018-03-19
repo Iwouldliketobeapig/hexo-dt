@@ -81,3 +81,11 @@ categories:
 
 `irregular`: 不规则
 `immediate`: 即使（vue watch）
+
+### 2018-3-14
+
+`while`: 直到(javascript方法)
+`summary`: 概要
+`scoped`: 作用域(vue)
+`align`: 对齐（text-align）
+`step`: 步骤

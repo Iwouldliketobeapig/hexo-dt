@@ -105,3 +105,4 @@ categories:
 `increment`: 增量(vuex)
 `store`: 储存(vuex)
 `mutation`: 突变(vuex)
+`trace`: 跟踪(http协议)

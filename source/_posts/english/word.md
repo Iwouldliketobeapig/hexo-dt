@@ -87,5 +87,21 @@ categories:
 `while`: 直到(javascript方法)
 `summary`: 概要
 `scoped`: 作用域(vue)
+
+### 2018-3-15
 `align`: 对齐（text-align）
 `step`: 步骤
+`reserved`: 保留字段 （vue源码）
+`observed`: 观察到的（vue源码）
+`process`: 流程
+`vertical`: 垂直
+
+### 2018-3-20
+
+`notify`: 通知（vue源码解析）
+
+### 2018-3-21
+
+`increment`: 增量(vuex)
+`store`: 储存(vuex)
+`mutation`: 突变(vuex)

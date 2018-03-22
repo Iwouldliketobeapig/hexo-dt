@@ -106,3 +106,9 @@ categories:
 `store`: 储存(vuex)
 `mutation`: 突变(vuex)
 `trace`: 跟踪(http协议)
+
+### 2018-3-22
+
+`expect`: 期望(http请求首部)
+
+编辑中...

@@ -106,3 +106,7 @@ categories:
 `store`: 储存(vuex)
 `mutation`: 突变(vuex)
 `trace`: 跟踪(http协议)
+
+### 2018-3-22
+
+`earpiece`: 听筒

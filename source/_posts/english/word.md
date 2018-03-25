@@ -109,6 +109,7 @@ categories:
 
 ### 2018-3-22
 
+`earpiece`: 听筒
 `expect`: 期望(http请求首部)
 
 ### 2018-3-23
@@ -129,5 +130,3 @@ categories:
 
 `precondition`: 前提(http协议)
 `satisfiable`: 可满足(http协议)
-
-编辑中...

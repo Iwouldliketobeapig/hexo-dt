@@ -109,10 +109,7 @@ categories:
 
 ### 2018-3-22
 
-<<<<<<< HEAD
 `earpiece`: 听筒
-=======
 `expect`: 期望(http请求首部)
 
 编辑中...
->>>>>>> a9fa0e580db5f529617cb3b806a84a78710ad1c0

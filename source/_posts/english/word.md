@@ -112,4 +112,23 @@ categories:
 `earpiece`: 听筒
 `expect`: 期望(http请求首部)
 
+### 2018-3-23
+
+`forward`: 发送(http协议)
+
+### 2018-3-24
+
+`trailer`: 拖挂(http协议)
+`partail`: 局部(http协议)
+`mutiple`: 多(http协议)
+`temporary`: 临时(http协议)
+`authorized`: 合法(http协议)
+`forbidden`: 被禁止(http协议)
+`conflict`: 冲突(http协议)
+
+### 2018-3-25
+
+`precondition`: 前提(http协议)
+`satisfiable`: 可满足(http协议)
+
 编辑中...

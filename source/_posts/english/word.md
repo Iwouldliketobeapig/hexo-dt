@@ -130,3 +130,11 @@ categories:
 
 `precondition`: 前提(http协议)
 `satisfiable`: 可满足(http协议)
+
+### 2018-3-26
+
+`enterprise`: 企业
+`captcha`: 验证码
+`corporation`: 公司
+
+编辑中...

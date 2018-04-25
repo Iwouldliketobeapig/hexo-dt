@@ -137,4 +137,13 @@ categories:
 `captcha`: 验证码
 `corporation`: 公司
 
+### 2018-4-24
+
+`reducer`: 减速器（redux）
+`subscribe`: 订阅（redux）
+`immutable`: 一成不变（react）
+`interval`: 间隔（js）
+`prevent`: 避免
+`interface`: 接口
+
 编辑中...

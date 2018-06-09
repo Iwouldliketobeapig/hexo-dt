@@ -146,4 +146,8 @@ categories:
 `prevent`: 避免
 `interface`: 接口
 
+### 2018-6-6
+
+`supplier`: 供应商
+
 编辑中...

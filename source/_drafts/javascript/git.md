@@ -6,4 +6,4 @@ tag:
 categories:
   - 项目
 ---
-![](/imgs/project/theme/git.jpg)
+![](/imgs/project/git/git.jpg)

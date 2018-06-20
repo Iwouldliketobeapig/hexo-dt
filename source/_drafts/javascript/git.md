@@ -44,3 +44,8 @@ categories:
   3.git pull 默认未git pull --merge,设置为git pull --rebase即按照rebase处理冲突
 19. `git pull <origin(源)> <feature(远程分支名)>`: 从远程仓库分支拉取代码
   例: git pull origin master
+20. `git status`: 查看更改信息(包括本地已更改，及已经add但是没有commit的更改)
+21. `git log`: 查看commit信息
+22. `git reset [--soft |  --mixed | --hard | --merge | --keep ] [<commit>]`
+  例: git reset --soft HEAD^
+    **参数**

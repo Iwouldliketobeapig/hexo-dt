@@ -35,25 +35,24 @@ categories:
 16. `git merge <name(分支名)>`: 合并分支
   例: git merge test
 17. `git rebase <name(分支名)>`: 合并分支
-例: git rebase test
-`merge与rebase的区别`
+  例: git rebase test
+  `merge与rebase的区别`
   1.merge不会保存merge分支的commit
   2.处理冲突时
     ① git add . => git commit -m 'fix: 一些信息'会保存一条commit信息
     ② git add . => git rebase --continue 不产生额外的附加信息，当需要处理多个commit冲突时，需要重复处理多次
   3.git pull 默认未git pull --merge,设置为git pull --rebase即按照rebase处理冲突
 18. `git pull <origin(源)> <feature(远程分支名)>`: 从远程仓库分支拉取代码
-  例: git pull origin master
 19. `git status`: 查看更改信息(包括本地已更改，及已经add但是没有commit的更改)
 20. `git log`: 查看commit信息
 21. `git reset [--soft |  --mixed | --hard | --merge | --keep ] [<commit>]`
   例: git reset --soft HEAD^
-    **参数**
-    `[--soft |  --mixed | --hard | --merge | --keep ]`
+  **参数**
+  `[--soft |  --mixed | --hard | --merge | --keep ]`
     ① --soft: 只回退commit信息，不回退commit、add和未add的更改
     ② --mixed(默认): 回退commit信息，回退未add的更改，保留已经add和commit的信息
     ③ --hard: 直接回退到某个commit版本
-    `[<commit>]`
+  `[<commit>]`
     ① HEAD^: 回退到上一个commit，n个`^`表示回退到上n个commit
     ② HEAD^0: 回退到上一个commit, `^n`回退到上n个commit
     ③ commit的SHA1: 可以通过git log查看

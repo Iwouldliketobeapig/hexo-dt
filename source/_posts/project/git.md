@@ -1,6 +1,6 @@
 ---
 title: git常用命令
-date: 2018-06-09
+date: 2018-06-25
 tag: 
   - git
 categories:
@@ -58,3 +58,5 @@ categories:
     ② HEAD^0: 回退到上一个commit, `^n`回退到上n个commit
     ③ commit的SHA1: 可以通过git log查看
     <img src="/imgs/project/git/gitlog.png">
+
+[在github上编辑此页](https://github.com/Iwouldliketobeapig/hexo-dt/blob/master/source/_posts/project/git.md)

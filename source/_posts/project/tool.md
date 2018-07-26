@@ -23,4 +23,4 @@ categories:
   **Vue.js devtools：** vue查看工具
 
 
-[谢谢推荐实用工具](https://github.com/Iwouldliketobeapig/hexo-dt/edit/master/source/_posts/project/tool.md)
+[谢谢推荐工具](https://github.com/Iwouldliketobeapig/hexo-dt/edit/master/source/_posts/project/tool.md)

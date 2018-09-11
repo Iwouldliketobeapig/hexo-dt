@@ -44,3 +44,9 @@ categories:
   在组件卸载和销毁之前被调用。用来处理清理工作，如解除绑定，取消网络请求，清理Dom,解除绑定器等。
 ## shouldComponentUpdate
   使用shouldComponentUpdate，确认组件是否需要因为state和props的改变而更新，默认行为是所有state改变都会触发组件更新
+  当props和state更新时会触发此生命周期，首次不触发此生命周期
+  返回true生命周期继续，返回false生命周期不继续
+## getSnapshotBeforeUpdate
+  在最新的渲染输出提交给DOM前将会立即调用,返回值将传给componentDidUpdate
+## componentDidCatch
+  渲染期间，生命周期方法或任何子组件的构造函数中发生错误时，将调用此方法

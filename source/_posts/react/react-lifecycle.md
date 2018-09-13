@@ -1,6 +1,6 @@
 ---
 title: react生命周期(react lifecycle)
-date: 2018-08-20
+date: 2018-09-13
 tag: 
   - react
 categories:
@@ -88,3 +88,6 @@ props或state的更改可能导致更新。 重新呈现组件时，将按以下
 
 ### componentDidCatch()
   渲染期间，生命周期方法或任何子组件的构造函数中发生错误时，将调用此方法
+
+[在github上编辑此页](https://github.com/Iwouldliketobeapig/hexo-dt/blob/master/source/_posts/react/react-lifecycle.md)
+[react生命周期官方文档](https://reactjs.org/docs/react-component.html)

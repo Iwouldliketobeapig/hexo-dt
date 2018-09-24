@@ -11,7 +11,7 @@ categories:
 # 几个提高团队幸福感的插件
 **简单的集成到了vue-cli生成的项目上**
 
-> A Vue.js project
+**A Vue.js project**
 
 ## Build Setup
 
@@ -37,12 +37,13 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ### 步奏
 
-> 安装validate-commit-msg
+**安装validate-commit-msg**
 ```bash
 npm i --D validate-commit-msg
 ```
-> 添加commit规则
+**添加commit规则**
 1. 根目录添加[.vcmrc](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/.vcmrc)文件，并添加规则，必须为JSON格式
+
 ```JSON
 {
   "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert"],
@@ -61,6 +62,7 @@ npm i --D validate-commit-msg
 }
 ```
 2. 添加到package.json中
+
 ```package.json
 {
   "config": {
@@ -70,12 +72,13 @@ npm i --D validate-commit-msg
   }
 }
 ```
-> 安装husky,并添加commitmsg命令
+**安装husky,并添加commitmsg命令**
 ```bash
 npm i --D husky
 ```
 * 在[package.json](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/package.json#L12)中添加"commitmsg": "validate-commit-msg"
-```
+
+```json
 {
   "scripts": {
     "commitmsg": "validate-commit-msg"
@@ -89,7 +92,7 @@ npm i --D husky
 *管理团队css编写规范*
 
 ### 步奏
-> 安装stylelint, stylelint-order, stylelint-processor-html, stylelint-scss, stylelint-webpack-plugin
+**安装stylelint, stylelint-order, stylelint-processor-html, stylelint-scss, stylelint-webpack-plugin**
 ```bash
 // stylelint-order: 属性顺序插件
 // stylelint-processor-htm: 检查html中的<style>便签中的样式
@@ -98,7 +101,7 @@ npm i --D husky
 npm i stylelint stylelint-order stylelint-processor-html stylelint-scss stylelint-webpack-plugin --D
 ```
 
-> 在根目录添加[.stylelintrc](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/.stylelintrc)文件，添加规则和插件
+**在根目录添加[.stylelintrc](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/.stylelintrc)文件，添加规则和插件**
 ```json
 { 
   "processors": ["stylelint-processor-html"],
@@ -128,7 +131,7 @@ npm i stylelint stylelint-order stylelint-processor-html stylelint-scss stylelin
 }
 ```
 
-> webpack中添加[stylelint-webpack-plugin](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/build/webpack.dev.conf.js#L59)
+**webpack中添加[stylelint-webpack-plugin]**(https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/build/webpack.dev.conf.js#L59)
 ```javascript
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 plugins: [
@@ -146,12 +149,12 @@ plugins: [
 
 ### 步奏
 
-> 安装mockjss
+**安装mockjs**
 ```bash
 npm i --D mockjs
 ```
 
-> 我在项目中创建了个mock，定义了个[test](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/mock/user/test.js)
+**我在项目中创建了个mock，定义了个[test](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/mock/user/test.js)**
 ```javascript
 const Mock = require('mockjs')
 Mock.mock('/test', 'get',
@@ -165,12 +168,12 @@ Mock.mock('/test', 'get',
 )
 ```
 
-> 在src下的App.vue中[引入](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/src/main.js#L8)(通过添加环境变量引入，可以快速切换)
+**在src下的App.vue中[引入](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/src/main.js#L8)(通过添加环境变量引入，可以快速切换)**
 ```javascript
 import '../mock'
 ```
 
-> [HelloWord.vue](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/src/components/HelloWorld.vue#L115)中测试
+**[HelloWord.vue](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/src/components/HelloWorld.vue#L115)中测试**
 ```javascript
 axios.get('/test')
   .then(res => {
@@ -184,8 +187,8 @@ axios.get('/test')
 *管理生产bug*
 
 ### 步奏
-> 在Sentry上创建一个项目获取DNS
-> 在[main.js](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/src/main.js#L6)添加
+**在Sentry上创建一个项目获取DNS**
+**在[main.js](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/src/main.js#L6)添加**
 ```javascript
 import Raven from 'raven-js'
 import RavenVue from 'raven-js/plugins/vue'

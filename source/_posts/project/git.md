@@ -22,19 +22,21 @@ categories:
 7. `git checkout -b <name(分支名)>`: 创建并切换到创建分支
   例： git checkout -b dev
 8. `git branch`: 查看当前分支及所有分支
-9. `git add .`: 暂存所有文件
-10. `git add <file(文件路径 + 文件名)>`: 暂存某个文件
+9. `git branch -d <name(分支名)>`: 删除某个分支
+10. `git branch -D <name(分支名)>`: 强制删除某个分支
+11. `git add .`: 暂存所有文件
+12. `git add <file(文件路径 + 文件名)>`: 暂存某个文件
   例： git add package.json
-11. `git commit -m '备注'`: 添加备注信息等
+13. `git commit -m '备注'`: 添加备注信息等
   例： git commit -m 'feat: 添加了某个备注'
-12. `git push <origin(源名)> <name(分支名)>`: 向远程仓库推送更改资源
-13. `git push <origin(源名)> <name(分支名)> --force`: 强制更新远程仓库
+14. `git push <origin(源名)> <name(分支名)>`: 向远程仓库推送更改资源
+15. `git push <origin(源名)> <name(分支名)> --force`: 强制更新远程仓库
   例： git push origin master
-14. `git stash`: 缓存所有更改
-15. `git stash pop`: 放出缓存且删除缓存记录
-16. `git merge <name(分支名)>`: 合并分支
+16. `git stash`: 缓存所有更改
+17. `git stash pop`: 放出缓存且删除缓存记录
+18. `git merge <name(分支名)>`: 合并分支
   例: git merge test
-17. `git rebase <name(分支名)>`: 合并分支
+19. `git rebase <name(分支名)>`: 合并分支
   例: git rebase test
   `merge与rebase的区别`
   1.merge不会保存merge分支的commit
@@ -42,10 +44,10 @@ categories:
     ① git add . => git commit -m 'fix: 一些信息'会保存一条commit信息
     ② git add . => git rebase --continue 不产生额外的附加信息，当需要处理多个commit冲突时，需要重复处理多次
   3.git pull 默认未git pull --merge,设置为git pull --rebase即按照rebase处理冲突
-18. `git pull <origin(源)> <feature(远程分支名)>`: 从远程仓库分支拉取代码
-19. `git status`: 查看更改信息(包括本地已更改，及已经add但是没有commit的更改)
-20. `git log`: 查看commit信息
-21. `git reset [--soft |  --mixed | --hard | --merge | --keep ] [<commit>]`
+20. `git pull <origin(源)> <feature(远程分支名)>`: 从远程仓库分支拉取代码
+21. `git status`: 查看更改信息(包括本地已更改，及已经add但是没有commit的更改)
+22. `git log`: 查看commit信息
+23. `git reset [--soft |  --mixed | --hard | --merge | --keep ] [<commit>]`
   例: git reset --soft HEAD^
   **参数**
   `[--soft |  --mixed | --hard | --merge | --keep ]`

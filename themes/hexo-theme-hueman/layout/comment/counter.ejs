@@ -1,5 +1,5 @@
 <% if (post.comments) { %>
-<span class="comment-counter">
+<span class="comment-counter" style="display: none">
     <i class="fa fa-comments-o"></i>
     <% if (theme.comment.disqus) { %>
         <span class="disqus-comment-count" data-disqus-identifier="<%= post.disqusId || '' %>" data-disqus-url="<%= post.permalink %>">0</span>
